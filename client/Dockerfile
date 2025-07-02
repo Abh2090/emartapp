@@ -1,6 +1,6 @@
 FROM node:14 AS web-build
 WORKDIR /usr/src/app
-COPY ./ ./client
+COPY ..client/ ./client
 RUN cd client && npm install && npm run build --prod
 
 # Use official nginx image as the base image
